@@ -1,0 +1,298 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		85E662191F0ABD4400EBA98E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E662181F0ABD4400EBA98E /* AppDelegate.swift */; };
+		85E6621B1F0ABD4400EBA98E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E6621A1F0ABD4400EBA98E /* ViewController.swift */; };
+		85E6621D1F0ABD4400EBA98E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E6621C1F0ABD4400EBA98E /* Assets.xcassets */; };
+		85E662201F0ABD4400EBA98E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E6621E1F0ABD4400EBA98E /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		85E662151F0ABD4400EBA98E /* Facebook Workplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Facebook Workplace.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85E662181F0ABD4400EBA98E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		85E6621A1F0ABD4400EBA98E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		85E6621C1F0ABD4400EBA98E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		85E6621F1F0ABD4400EBA98E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85E662211F0ABD4400EBA98E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85E662121F0ABD4400EBA98E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85E6620C1F0ABD4400EBA98E = {
+			isa = PBXGroup;
+			children = (
+				85E662171F0ABD4400EBA98E /* Facebook Workplace */,
+				85E662161F0ABD4400EBA98E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85E662161F0ABD4400EBA98E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85E662151F0ABD4400EBA98E /* Facebook Workplace.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85E662171F0ABD4400EBA98E /* Facebook Workplace */ = {
+			isa = PBXGroup;
+			children = (
+				85E662181F0ABD4400EBA98E /* AppDelegate.swift */,
+				85E6621A1F0ABD4400EBA98E /* ViewController.swift */,
+				85E6621C1F0ABD4400EBA98E /* Assets.xcassets */,
+				85E6621E1F0ABD4400EBA98E /* Main.storyboard */,
+				85E662211F0ABD4400EBA98E /* Info.plist */,
+			);
+			path = "Facebook Workplace";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85E662141F0ABD4400EBA98E /* Facebook Workplace */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85E662241F0ABD4400EBA98E /* Build configuration list for PBXNativeTarget "Facebook Workplace" */;
+			buildPhases = (
+				85E662111F0ABD4400EBA98E /* Sources */,
+				85E662121F0ABD4400EBA98E /* Frameworks */,
+				85E662131F0ABD4400EBA98E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Facebook Workplace";
+			productName = "Facebook Workplace";
+			productReference = 85E662151F0ABD4400EBA98E /* Facebook Workplace.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85E6620D1F0ABD4400EBA98E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Handmade Apps Ltd.";
+				TargetAttributes = {
+					85E662141F0ABD4400EBA98E = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = V45DJ8ATAE;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 85E662101F0ABD4400EBA98E /* Build configuration list for PBXProject "Facebook Workplace" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85E6620C1F0ABD4400EBA98E;
+			productRefGroup = 85E662161F0ABD4400EBA98E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85E662141F0ABD4400EBA98E /* Facebook Workplace */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85E662131F0ABD4400EBA98E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E6621D1F0ABD4400EBA98E /* Assets.xcassets in Resources */,
+				85E662201F0ABD4400EBA98E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85E662111F0ABD4400EBA98E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85E6621B1F0ABD4400EBA98E /* ViewController.swift in Sources */,
+				85E662191F0ABD4400EBA98E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		85E6621E1F0ABD4400EBA98E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85E6621F1F0ABD4400EBA98E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		85E662221F0ABD4400EBA98E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		85E662231F0ABD4400EBA98E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		85E662251F0ABD4400EBA98E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V45DJ8ATAE;
+				INFOPLIST_FILE = "Facebook Workplace/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.handmadeapps.Facebook-Workplace";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		85E662261F0ABD4400EBA98E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = V45DJ8ATAE;
+				INFOPLIST_FILE = "Facebook Workplace/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.handmadeapps.Facebook-Workplace";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85E662101F0ABD4400EBA98E /* Build configuration list for PBXProject "Facebook Workplace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E662221F0ABD4400EBA98E /* Debug */,
+				85E662231F0ABD4400EBA98E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85E662241F0ABD4400EBA98E /* Build configuration list for PBXNativeTarget "Facebook Workplace" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85E662251F0ABD4400EBA98E /* Debug */,
+				85E662261F0ABD4400EBA98E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85E6620D1F0ABD4400EBA98E /* Project object */;
+}
