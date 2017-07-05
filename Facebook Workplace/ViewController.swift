@@ -9,7 +9,7 @@
 import Cocoa
 import WebKit
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
 
     @IBOutlet var webView: WKWebView!
     
@@ -24,6 +24,11 @@ class ViewController: NSViewController {
             // Fallback on earlier versions
         }
         
+        webView.navigationDelegate = self
+        webView.uiDelegate = self
+        
+//        NSApplication.shared().keyWindow?.initialFirstResponder = webView
+        
         webView.load(URLRequest(url: URL(string: "http://work.facebook.com")!))
     }
 
@@ -34,5 +39,27 @@ class ViewController: NSViewController {
     }
 
 
+    // MARK: - Navigation Delegate
+    
+    // MARK: - UI Delegate
+    
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        // navigationAction.request.url
+        // navigationAction.sourceFrame.request.url (https://work-79944376.facebook.com/?sk=nf)
+        // navigationAction.navigationType (linkActivated = 0)
+        
+        if navigationAction.navigationType == .linkActivated, let targetURL = navigationAction.request.url{
+            
+            if targetURL.absoluteString.contains("https://work-79944376.facebook.com") {
+                webView.load(navigationAction.request)
+            } else {
+                NSWorkspace.shared().open(targetURL)
+            }
+            
+        }
+        
+        return nil
+    }
+    
 }
 
