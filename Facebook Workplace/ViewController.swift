@@ -43,6 +43,12 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
     
     // MARK: - UI Delegate
     
+/*
+    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+        NSLog("")
+    }
+*/
+    
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
         // navigationAction.request.url
         // navigationAction.sourceFrame.request.url (https://work-79944376.facebook.com/?sk=nf)
