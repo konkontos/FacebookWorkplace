@@ -41,13 +41,6 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
 
     // MARK: - Navigation Delegate
     
-    // MARK: - UI Delegate
-    
-/*
-    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
-        NSLog("")
-    }
-*/
     
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
         // navigationAction.request.url
@@ -66,6 +59,35 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
         
         return nil
     }
+
+    
+    // MARK: - UI Delegate
+    
+    @available(OSX 10.12, *)
+    func webView(_ webView: WKWebView, runOpenPanelWith parameters: WKOpenPanelParameters, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping ([URL]?) -> Void) {
+        
+        let uploadPanel = NSOpenPanel()
+        uploadPanel.allowsMultipleSelection = parameters.allowsMultipleSelection
+        
+        uploadPanel.begin { (result: Int) in
+            
+            if result == NSFileHandlingPanelOKButton {
+                completionHandler(uploadPanel.urls)
+            } else {
+                completionHandler([])
+            }
+            
+        }
+        
+    }
+    
+    
+/*
+    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+        NSLog("")
+    }
+*/
+    
     
 }
 
