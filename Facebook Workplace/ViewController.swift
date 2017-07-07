@@ -13,6 +13,10 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
 
     @IBOutlet var webView: WKWebView!
     
+    var workplaceSite: String {
+        return Bundle.main.infoDictionary!["WorkplaceSite"] as! String
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +33,10 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
         
 //        NSApplication.shared().keyWindow?.initialFirstResponder = webView
         
-        webView.load(URLRequest(url: URL(string: "http://work.facebook.com")!))
+        let loadRequest = URLRequest(url: URL(string: workplaceSite)!)
+//        loadRequest.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+        
+        webView.load(loadRequest)
     }
 
     override var representedObject: Any? {
@@ -41,7 +48,6 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
 
     // MARK: - Navigation Delegate
     
-    
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
         // navigationAction.request.url
         // navigationAction.sourceFrame.request.url (https://work-79944376.facebook.com/?sk=nf)
@@ -49,7 +55,7 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
         
         if navigationAction.navigationType == .linkActivated, let targetURL = navigationAction.request.url{
             
-            if targetURL.absoluteString.contains("https://work-79944376.facebook.com") {
+            if targetURL.absoluteString.contains(workplaceSite) {
                 webView.load(navigationAction.request)
             } else {
                 NSWorkspace.shared().open(targetURL)
