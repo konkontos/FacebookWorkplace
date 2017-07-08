@@ -20,6 +20,9 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
+        NSLog(NSStringFromClass(ViewController.classForCoder()).components(separatedBy: ".").last!)
+        
         // Do any additional setup after loading the view.
         
         if #available(OSX 10.11, *) {
