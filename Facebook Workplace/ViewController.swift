@@ -17,6 +17,10 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate, NSUR
         return Bundle.main.infoDictionary!["WorkplaceSite"] as! String
     }
     
+    var previewStem: String {
+       return "/download/preview/"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -100,7 +104,9 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate, NSUR
         
         if navigationAction.navigationType == .linkActivated, let targetURL = navigationAction.request.url{
             
-            if targetURL.absoluteString.contains(workplaceSite) {
+            if targetURL.absoluteString.contains(previewStem) {
+                NSWorkspace.shared().open(targetURL)
+            } else if targetURL.absoluteString.contains(workplaceSite) {
                 webView.load(navigationAction.request)
             } else {
                 NSWorkspace.shared().open(targetURL)
