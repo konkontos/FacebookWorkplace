@@ -9,7 +9,7 @@
 import Cocoa
 import WebKit
 
-class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
+class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate, NSURLDownloadDelegate {
 
     @IBOutlet var webView: WKWebView!
     
@@ -49,7 +49,49 @@ class ViewController: NSViewController, WKNavigationDelegate, WKUIDelegate {
     }
 
 
+    // MARK: - NSURLDownloadDelegate
+    
+    func downloadDidBegin(_ download: NSURLDownload) {
+        NSLog("")
+    }
+    
+    
+    func downloadDidFinish(_ download: NSURLDownload) {
+        NSLog("")
+    }
+    
+    
+    func download(_ download: NSURLDownload, didFailWithError error: Error) {
+        NSLog("")
+    }
+    
+    func download(_ download: NSURLDownload, decideDestinationWithSuggestedFilename filename: String) {
+        let downloadFolder = NSSearchPathForDirectoriesInDomains(.downloadsDirectory, .userDomainMask, true)[0]
+        
+        let downloadFilename = (downloadFolder as NSString).appendingPathComponent(filename)
+        
+        download.setDestination(downloadFilename, allowOverwrite: false)
+    }
+    
     // MARK: - Navigation Delegate
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        
+        
+        if let webURL = webView.url {
+            
+            // Capture file and photo downloads
+            if webURL.absoluteString.contains("/file/") || webURL.absoluteString.contains("/photo/download/") {
+                webView.stopLoading()
+                
+                saveToDownloadsFolder(fromSourceURL: webURL, withDelegate: self)
+            }
+            
+        }
+        
+        
+    }
+    
     
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
         // navigationAction.request.url
